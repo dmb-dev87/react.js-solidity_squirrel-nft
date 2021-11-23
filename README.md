@@ -12,7 +12,7 @@
 
 ### Tutorial: NFT Metadata, IPFS, and Pinata
 
-- Project
+- Project(Python)
 
   generative-art-nft/metadata.py
 
