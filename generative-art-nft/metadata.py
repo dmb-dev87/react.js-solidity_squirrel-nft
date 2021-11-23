@@ -13,12 +13,12 @@ import warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
 # Base metadata. MUST BE EDITED.
-BASE_IMAGE_URL = "ipfs://<-- Your CID Code-->"
-BASE_NAME = ""
+BASE_IMAGE_URL = "ipfs://QmPZepqs94GxFaDCoW1CMFnFsrNMWwCH8ReVxmZU54JreJ"
+BASE_NAME = "Squirrel"
 
 BASE_JSON = {
   "name": BASE_NAME,
-  "description": "",
+  "description": "A collection of Squirrels on the Ethereum Blockchain",
   "image": BASE_IMAGE_URL,
   "attributes": [],
 }
