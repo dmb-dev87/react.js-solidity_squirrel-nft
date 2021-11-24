@@ -29,3 +29,13 @@
 - Tutorial URL
 
   https://medium.com/scrappy-squirrels/tutorial-writing-an-nft-collectible-smart-contract-9c7e235e96da
+
+### Tutorial: Writing an NFT Collectible Smart Contract
+
+- Project(Hardhat)
+
+  polygon-nft
+
+- Tutorial URL
+
+  https://medium.com/scrappy-squirrels/tutorial-developing-for-polygon-and-sidechains-66bef9ec80ef
