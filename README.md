@@ -45,3 +45,14 @@
 - Tutorial URL
 
   https://medium.com/scrappy-squirrels/tutorial-developing-for-polygon-and-sidechains-66bef9ec80ef
+
+### Tutorial: Building a web3 frontend with React
+
+- Project(React)
+
+  nft-collectible-frontend
+
+- Tutorial URL
+
+  https://medium.com/scrappy-squirrels/tutorial-building-a-web3-frontend-with-react-e0a87ea3bad
+  
