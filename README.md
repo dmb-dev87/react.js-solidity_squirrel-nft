@@ -30,6 +30,12 @@
 
   https://medium.com/scrappy-squirrels/tutorial-writing-an-nft-collectible-smart-contract-9c7e235e96da
 
+- Deployed Contract Address
+
+  0x8FE685738364646dE20a480c8ea730e5E112b5d6
+
+  https://rinkeby.etherscan.io/address/0x8FE685738364646dE20a480c8ea730e5E112b5d6
+
 ### Tutorial: Writing an NFT Collectible Smart Contract
 
 - Project(Hardhat)
