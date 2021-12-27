@@ -1,0 +1,44 @@
+.twoTables{
+  display:grid;
+  margin-right:10%;
+  margin-left:10%;
+  grid-template-columns: 33% 33% 33%;
+  grid-auto-rows: minmax(min-content, max-content);
+}
+
+.progressBarWrapper{
+  margin:10px;
+  display:grid;
+  margin-right:25%;
+  margin-left:25%;
+  grid-template-columns: 100%;
+  width:50%;
+  justify-content:center;
+  align-items:center;
+}
+
+.backButton{
+  margin : 10px;
+  position:absolute;
+  top:0;
+  left:0;
+}
+
+.marginDiv{
+  margin:10px;
+}
+
+.filterButton{
+  margin:10px;
+  padding: 14px 25px;
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 20px;
+  background: linear-gradient(to right, #3083d0 0%, #7526f4 100%);
+}
+
+.mainButton:hover,
+.mainButton:active {
+  background: linear-gradient(to right, #30cfd0 0%, #db26f4 100%);
+}

@@ -1,0 +1,75 @@
+:root {
+  --main-bg-color: #001d32;
+}
+
+.divProperties {
+  margin: 10px;
+}
+
+h2 {
+  justify-self: center;
+  align-self: center;
+}
+
+.tableProperties {
+  display: inline-block;
+  overflow: auto;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  border-radius: 1em;
+  width: 100%;
+  justify-self: center;
+  align-self: center;
+  background: var(--main-bg-color);
+  height: 450px;
+}
+
+
+.tableProperties th {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  text-align: center;
+  color: white;
+  border-color: white;
+  border-bottom: solid 1px black;
+}
+
+.tableProperties td {
+  border-bottom: solid 1px black;
+  text-align: left;
+  padding: 1rem;
+  width:100%;
+}
+
+.tableProperties tr{
+  width: 100%;
+  background: var(--main-bg-color);
+}
+
+.tableProperties tr:nth-child(even){
+  filter:brightness(120%);
+}
+
+.tableProperties .active {
+  background: linear-gradient(to right,var(--main-bg-color) 0%, #12755d 100%);
+  width: 100%;
+}
+
+.tableProperties .inactive:hover{
+  background: linear-gradient(to right,var(--main-bg-color) 0%, #12755d 100%);
+}
+
+.tableProperties tbody {
+  max-height: 400px;
+  overflow-y: scroll;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border-radius: 10px;
+}

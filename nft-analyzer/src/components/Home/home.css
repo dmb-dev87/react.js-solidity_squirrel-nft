@@ -1,0 +1,26 @@
+.welcomeTitle {
+  font-size: 72px;
+  background: linear-gradient(to right, #30cfd0 0%, #db26f4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.centeredTitle {
+  display: flex;
+  margin-top: 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.bottomText{
+  position:absolute;
+  bottom:0;
+  left:0;
+  color:grey;
+  font-size: small;
+}
+
+.bottomText a{
+  color:grey;
+}

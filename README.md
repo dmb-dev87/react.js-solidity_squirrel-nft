@@ -56,3 +56,12 @@
 
   https://medium.com/scrappy-squirrels/tutorial-building-a-web3-frontend-with-react-e0a87ea3bad
   
+### Develop an NFT Collection analyzer using React.js
+
+- Project(React)
+
+  nft-analyzer
+
+- Tutorial URL
+
+  https://medium.com/@msaug/develop-an-nft-collection-analyzer-using-react-js-part-1-1cd2b3e5d1cb
