@@ -1,21 +1,22 @@
 .twoTables{
-  display:grid;
-  margin-right:10%;
-  margin-left:10%;
-  grid-template-columns: 33% 33% 33%;
-  grid-auto-rows: minmax(min-content, max-content);
+    display:grid;
+    margin-right:10%;
+    margin-left:10%;
+    grid-template-columns: 33% 33% 33%;
+    grid-auto-rows: minmax(min-content, max-content);
 }
 
 .progressBarWrapper{
-  margin:10px;
-  display:grid;
-  margin-right:25%;
-  margin-left:25%;
-  grid-template-columns: 100%;
-  width:50%;
-  justify-content:center;
-  align-items:center;
+    margin:10px;
+    display:grid;
+    margin-right:25%;
+    margin-left:25%;
+    grid-template-columns: 100%;
+    width:50%;
+    justify-content:center;
+    align-items:center;
 }
+
 
 .backButton{
   margin : 10px;
@@ -27,6 +28,7 @@
 .marginDiv{
   margin:10px;
 }
+
 
 .filterButton{
   margin:10px;

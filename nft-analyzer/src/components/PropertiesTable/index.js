@@ -1,15 +1,16 @@
 import "./PropertiesTable.css";
-import { useState } from "react";
-import ReactTable from "react-table";
 import { useTable } from "react-table";
 
 function Table({ columns, data, triggerFilter }) {
+  // Use the state and functions returned from useTable to build your UI
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
     useTable({
       columns,
       data,
     });
 
+
+  // Render the UI for your table
   return (
     <table {...getTableProps()} className="tableProperties">
       <thead className="theadProperties">

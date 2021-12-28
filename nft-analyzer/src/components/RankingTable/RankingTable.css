@@ -14,7 +14,7 @@ img {
 
 .tableRank {
   color: white;
-  font-family: Arial, Helvetica, sans - serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: small;
   border-collapse: collapse;
   border-radius: 1em;
@@ -27,7 +27,7 @@ img {
 }
 
 .tableRank thead {
-  display: table - header - group;
+  display: table-header-group;
 }
 
 .tableRank tr:nth-child(even) {
@@ -42,16 +42,17 @@ img {
 
 .tableRank tr {
   border:solid 1px black;
-
 }
 
 .tableRank th{
   border:solid 1px black;
 }
 
-.tableRank td, th {
-    padding: 1em;
-    text-align: center;
+.tableRank td,
+th {
+  padding: 1em;
+  text-align: center;
+
 }
 
 .pagination {
@@ -60,7 +61,7 @@ img {
   margin: 5px;
 }
 
-.pagination.pageNumber {
+.pagination .pageNumber {
   color: white;
   display: flex;
   align-items: center;
@@ -88,7 +89,7 @@ img {
   border: none;
   outline: none;
   border-radius: 3px;
-  border-bottom: solid 2px white;
+  border-bottom: solid 2px white;   
   position: relative;
   color: white;
   background: transparent;
@@ -103,8 +104,6 @@ img {
   color: white;
   background: transparent;
 }
-
-/* Works on Chrome, Edge, and Safari */
 
 *::-webkit-scrollbar {
   width: 5px;

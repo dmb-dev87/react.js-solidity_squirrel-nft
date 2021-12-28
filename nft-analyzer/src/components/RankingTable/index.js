@@ -1,27 +1,20 @@
-import styled from "styled-components";
 import "./RankingTable.css";
 import {
   useTable,
   useFilters,
   useGlobalFilter,
-  useAsyncDebounce,
   usePagination,
 } from "react-table";
-import { useMemo, useEffect, useState, useCallback } from "react";
-import { matchSorter } from "match-sorter";
+import { useMemo, useEffect, useCallback } from "react";
 
 function Table({ columns, data, filters }) {
-
-  //returns true if an array contains a certain string
   const stringInArray = (element) => {
-    if (filters.length == 0) {
+    if (filters.length === 0) {
       return true;
     }
     return filters.indexOf(element) >= 0;
   };
 
-  //custom global filter function
-  //returns row with a trait value included in the filter
   const ourGlobalFilterFunction = useCallback((rows) => {
     return rows.filter((row) => {
       return Object.values(row.values).some((r) => stringInArray(r));
@@ -41,10 +34,8 @@ function Table({ columns, data, filters }) {
     gotoPage,
     nextPage,
     previousPage,
-    state,
     setPageSize,
     visibleColumns,
-    preGlobalFilteredRows,
     setGlobalFilter,
     state: { pageIndex, pageSize },
   } = useTable(
@@ -81,11 +72,6 @@ function Table({ columns, data, filters }) {
                 textAlign: "left",
               }}
             >
-              {/* <GlobalFilter
-                preGlobalFilteredRows={preGlobalFilteredRows}
-                globalFilter={state.globalFilter}
-                setGlobalFilter={setGlobalFilter}
-              /> */}
             </th>
           </tr>
         </thead>
@@ -169,7 +155,7 @@ function RankingTable({ properties, nftDataArray, contractAddress, filters }) {
           return {
             Header: key,
             accessor: key,
-            Cell: ({ value }) => <img src={value} />,
+            Cell: ({ value }) => <img src={value} alt="" />,
           };
         }
         if (key === "id") {

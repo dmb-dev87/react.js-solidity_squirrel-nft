@@ -1,18 +1,14 @@
 import { useState, useEffect } from "react";
-import { render } from "react-dom";
 import { useParams } from "react-router-dom";
-import { ethers } from "ethers";
 import { isAddress } from "@ethersproject/address";
-import { isValidName } from "@ethersproject/hash";
-import CollectionInfo from "../CollectionInfo"
+import CollectionInfo from "../CollectionInfo";
 import { getTokenMetadata } from "../../utils/getTokenMetadata";
-import { prepareRequestURL } from "../../utils/prepareRequestURL";
+import { prepareRequestURL } from "../../utils/prepareRequestUrl";
 import { sendRequests } from "../../utils/sendRequests";
 import { ComputeCollectionData } from "../../utils/ComputeData";
 import RankingTable from "../RankingTable";
 import PropertiesTable from "../PropertiesTable";
-import { Spinner, ProgressBar } from "react-bootstrap";
-import HomeButton from "../HomeButton";
+import { ProgressBar } from "react-bootstrap";
 import LoadingData from "../LoadingData";
 import ErrorMessage from "../ErrorMessage";
 import InvalidAddress from "../InvalidAddress";
@@ -20,29 +16,18 @@ import InvalidAddress from "../InvalidAddress";
 import "./Collection.css";
 
 function Collection() {
-  //URL parameter
   const { contractAddress } = useParams();
-
-  //App states
   const [isValid, setIsValid] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [hideFilters, setHideFilters] = useState(false);
-
-  //Metadata states
   const [name, setName] = useState("");
   const [symbol, setSymbol] = useState("");
   const [tokenURI, setTokenURI] = useState("");
   const [totalSupply, setTotalSupply] = useState(0);
-
-  //Data states
   const [rarityData, setRarityData] = useState();
   const [nftDataArray, setNftDataArray] = useState([]);
   const [progress, setProgress] = useState("1");
-
-  //Handling errors
   const [error, setError] = useState(false);
-
-  //Filters to apply
   const [filters, setFilters] = useState([]);
 
   useEffect(() => {
@@ -52,10 +37,6 @@ function Collection() {
       return;
     }
 
-    /**
-     *
-     * @returns data from the smart contract
-     */
     const asyncTokenMetadata = async () => {
       try {
         const tokenMetadata = await getTokenMetadata(contractAddress);
@@ -87,9 +68,6 @@ function Collection() {
     let analyzed_size = 0;
     let failed = 0;
 
-    /**
-     * Fetches the data and stores them in our states
-     */
     const asyncTokenURIData = async () => {
       let res;
       const requestURL = await prepareRequestURL(tokenURI);
@@ -101,8 +79,6 @@ function Collection() {
           requestURL,
           res.tokenIDs
         );
-        //keep track of how many requests have failed to know how many
-        // nfts were analyzed
         failed += failedInRequest;
         new_data.forEach((data) => {
           metadata_array.push(data);
@@ -122,14 +98,9 @@ function Collection() {
         setRarityData(rarity_data);
         setNftDataArray(nftDataArray);
         setIsLoading(false);
-      } while (res.remaining != 0 && failed <= 100);
+      } while (res.remaining !== 0 && failed <= 100);
     };
 
-    /**
-     *
-     * @param {*} tokenIDs array of tokenIDs to analyze
-     * @returns subArray of next batch to send and remaning amount
-     */
     const prepareBatchToSend = (tokenIDs) => {
       const BATCH_SIZE = 200;
       let remaining;

@@ -4,8 +4,7 @@ const WEB3_ENDPOINT = 'https://cloudflare-eth.com';
 
 const handleError = () => {
   return undefined;
-}
-
+};
 export const getTokenMetadata = async (address) => {
   const abi = [
     'function name() view returns (string name)',
@@ -14,7 +13,6 @@ export const getTokenMetadata = async (address) => {
     'function totalSupply() external view returns (uint256)',
     'function tokenURI(uint256 tokenId) view returns (string memory)'
   ];
-
   const { JsonRpcProvider } = ethers.providers;
   const provider = new JsonRpcProvider(WEB3_ENDPOINT);
   const contract = new ethers.Contract(address, abi, provider);
@@ -24,6 +22,5 @@ export const getTokenMetadata = async (address) => {
     contract.totalSupply().catch(handleError),
     contract.tokenURI(1).catch(handleError)
   ]);
-
   return { name, symbol, totalSupply, tokenURI };
 };

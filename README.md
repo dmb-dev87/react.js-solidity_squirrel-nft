@@ -65,3 +65,7 @@
 - Tutorial URL
 
   https://medium.com/@msaug/develop-an-nft-collection-analyzer-using-react-js-part-1-1cd2b3e5d1cb
+
+- Test Contract Address(BAYC)
+
+  0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d

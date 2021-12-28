@@ -3,9 +3,11 @@ export const prepareRequestURL = async (URI) => {
   const { useIPFS, baseURL } = unwrapURLorHash(URI);
   const requestURL = prepareURL(baseURL, useIPFS);
   return requestURL;
-}
 
-const unwrapURLorHash = (URI) => {
+};
+
+
+function unwrapURLorHash(URI) {
   var useIPFS = false;
   var baseURL;
   if (URI.includes("ipfs://")) {
@@ -16,15 +18,16 @@ const unwrapURLorHash = (URI) => {
     baseURL = URI.split("/1")[0];
   }
   return { useIPFS, baseURL };
-}
+};
 
 const prepareURL = (baseURL, useIPFS) => {
   let requestURL;
   if (!useIPFS) {
-    requestURL = `${baseURL}`;
+    requestURL = `${baseURL}`
   }
   else {
-    requestURL = `https://ipfs.io/ipfs/${baseURL}`;
+    requestURL = `https://ipfs.io/ipfs/${baseURL}`
   }
   return requestURL;
-}
+};
+

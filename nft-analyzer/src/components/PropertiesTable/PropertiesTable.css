@@ -25,7 +25,6 @@ h2 {
   height: 450px;
 }
 
-
 .tableProperties th {
   padding-top: 6px;
   padding-bottom: 6px;
@@ -60,10 +59,13 @@ h2 {
   background: linear-gradient(to right,var(--main-bg-color) 0%, #12755d 100%);
 }
 
+
+
 .tableProperties tbody {
   max-height: 400px;
   overflow-y: scroll;
 }
+
 
 *::-webkit-scrollbar {
   width: 5px;
